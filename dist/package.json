@@ -1,0 +1,27 @@
+{
+  "name": "@devindon/yrm",
+  "version": "0.1.4",
+  "description": "Yarn registries manager.",
+  "main": "index.js",
+  "bin": {
+    "yrm": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DevinDon/yrm.git"
+  },
+  "keywords": [
+    "npm",
+    "register",
+    "manager"
+  ],
+  "author": "Devin Don <DevinDon@Foxmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevinDon/yrm/issues"
+  },
+  "homepage": "https://github.com/DevinDon/yrm#readme",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}

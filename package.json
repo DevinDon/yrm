@@ -1,0 +1,37 @@
+{
+  "name": "@devindon/yrm",
+  "version": "0.0.0",
+  "description": "Yarn registries manager.",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "run": "node dist",
+    "start": "ts-node src",
+    "test": "ts-node test"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Devin Don <DevinDon@Foxmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "commander": "^2.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DevinDon/yrm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DevinDon/yrm/issues"
+  },
+  "homepage": "https://github.com/DevinDon/yrm#readme"
+}
