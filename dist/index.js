@@ -9,15 +9,15 @@ const child_process_1 = require("child_process");
 const REGISTRY = {
     yarn: {
         home: 'https://registry.yarnpkg.com',
-        registry: 'https://registry.yarnpkg.com/'
+        registry: 'https://registry.yarnpkg.com'
     },
     cnpm: {
         home: 'http://cnpmjs.org',
-        registry: 'http://r.cnpmjs.org/'
+        registry: 'http://r.cnpmjs.org'
     },
     taobao: {
         home: 'https://npm.taobao.org',
-        registry: 'https://registry.npm.taobao.org/'
+        registry: 'https://registry.npm.taobao.org'
     }
 };
 commander_1.default
@@ -28,7 +28,7 @@ commander_1.default
     .alias('ls')
     .description('list all registry')
     .action(() => {
-    const active = child_process_1.execSync('yarn get registry').toString().trim();
+    const active = child_process_1.execSync('yarn config get registry').toString().trim();
     for (const key in REGISTRY) {
         if (REGISTRY.hasOwnProperty(key)) {
             const r = REGISTRY[key];
@@ -41,7 +41,7 @@ commander_1.default
     .description('use special registry')
     .action(registry => {
     if (REGISTRY.hasOwnProperty(registry)) {
-        const result = child_process_1.execSync(`yarn set registry ${REGISTRY[registry].registry}`).toString().trim();
+        const result = child_process_1.execSync(`yarn config set registry ${REGISTRY[registry].registry}`).toString().trim();
         console.log(`Registry has been set: ${registry}`);
     }
     else {

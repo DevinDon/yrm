@@ -12,15 +12,15 @@ interface Register {
 const REGISTRY: Register = {
   yarn: {
     home: 'https://registry.yarnpkg.com',
-    registry: 'https://registry.yarnpkg.com/'
+    registry: 'https://registry.yarnpkg.com'
   },
   cnpm: {
     home: 'http://cnpmjs.org',
-    registry: 'http://r.cnpmjs.org/'
+    registry: 'http://r.cnpmjs.org'
   },
   taobao: {
     home: 'https://npm.taobao.org',
-    registry: 'https://registry.npm.taobao.org/'
+    registry: 'https://registry.npm.taobao.org'
   }
 };
 
@@ -33,7 +33,7 @@ program
   .alias('ls')
   .description('list all registry')
   .action(() => {
-    const active = execSync('yarn get registry').toString().trim();
+    const active = execSync('yarn config get registry').toString().trim();
     for (const key in REGISTRY) {
       if (REGISTRY.hasOwnProperty(key)) {
         const r = REGISTRY[key];
@@ -47,7 +47,7 @@ program
   .description('use special registry')
   .action(registry => {
     if (REGISTRY.hasOwnProperty(registry)) {
-      const result = execSync(`yarn set registry ${REGISTRY[registry].registry}`).toString().trim();
+      const result = execSync(`yarn config set registry ${REGISTRY[registry].registry}`).toString().trim();
       console.log(`Registry has been set: ${registry}`);
     } else {
       console.error(`No such registry: ${registry}`);
