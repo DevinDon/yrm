@@ -1,6 +1,6 @@
 {
   "name": "@devindon/yrm",
-  "version": "0.1.4",
+  "version": "0.1.0",
   "description": "Yarn registries manager.",
   "main": "index.js",
   "bin": {
